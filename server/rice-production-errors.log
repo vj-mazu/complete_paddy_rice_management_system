@@ -1,0 +1,60 @@
+
+=== Rice Production Error ===
+Time: 2025-11-18T10:20:05.531Z
+Message: new row for relation "rice_productions" violates check constraint "rice_productions_producttype_check"
+Name: SequelizeDatabaseError
+SQL: INSERT INTO "rice_productions" ("id","outturnId","date","productType","quantityQuintals","packagingId","bags","paddyBagsDeducted","movementType","locationCode","lorryNumber","billNumber","createdBy","status","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15) RETURNING "id","outturnId","date","productType","quantityQuintals","packagingId","bags","paddyBagsDeducted","movementType","locationCode","lorryNumber","billNumber","createdBy","status","approvedBy","approvedAt","createdAt","updatedAt";
+Stack: Error
+    at Query.run (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresQueryInterface.insert (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async RiceProduction.create (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async C:\Users\maju\Desktop\ashishmill\server\routes\rice-productions.js:318:24
+========================
+
+=== Rice Production Error ===
+Time: 2025-11-18T10:23:02.209Z
+Message: new row for relation "rice_productions" violates check constraint "rice_productions_producttype_check"
+Name: SequelizeDatabaseError
+SQL: INSERT INTO "rice_productions" ("id","outturnId","date","productType","quantityQuintals","packagingId","bags","paddyBagsDeducted","movementType","locationCode","lorryNumber","billNumber","createdBy","status","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15) RETURNING "id","outturnId","date","productType","quantityQuintals","packagingId","bags","paddyBagsDeducted","movementType","locationCode","lorryNumber","billNumber","createdBy","status","approvedBy","approvedAt","createdAt","updatedAt";
+Stack: Error
+    at Query.run (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresQueryInterface.insert (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async RiceProduction.create (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async C:\Users\maju\Desktop\ashishmill\server\routes\rice-productions.js:318:24
+========================
+
+=== Rice Production Error ===
+Time: 2025-11-18T10:23:34.348Z
+Message: numeric field overflow
+Name: SequelizeDatabaseError
+SQL: UPDATE "outturns" SET "yield_percentage"=$1,"updatedAt"=$2 WHERE "id" = $3
+Stack: Error
+    at Query.run (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresQueryInterface.bulkUpdate (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:366:12)
+    at async Outturn.update (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\model.js:2010:28)
+    at async YieldCalculationService.calculateAndUpdateYield (C:\Users\maju\Desktop\ashishmill\server\services\YieldCalculationService.js:64:7)
+    at async C:\Users\maju\Desktop\ashishmill\server\routes\rice-productions.js:402:5
+========================
+
+=== Rice Production Error ===
+Time: 2025-11-18T10:27:46.781Z
+Message: numeric field overflow
+Name: SequelizeDatabaseError
+SQL: UPDATE "outturns" SET "yield_percentage"=$1,"updatedAt"=$2 WHERE "id" = $3
+Stack: Error
+    at Query.run (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresQueryInterface.bulkUpdate (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:366:12)
+    at async Outturn.update (C:\Users\maju\Desktop\ashishmill\server\node_modules\sequelize\lib\model.js:2010:28)
+    at async YieldCalculationService.calculateAndUpdateYield (C:\Users\maju\Desktop\ashishmill\server\services\YieldCalculationService.js:64:7)
+    at async C:\Users\maju\Desktop\ashishmill\server\routes\rice-productions.js:402:5
+========================
